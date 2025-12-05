@@ -67,10 +67,7 @@ class MyApp extends StatelessWidget {
 You can log messages from **anywhere in your app** using:
 
 ```dart
-AppLoggerWrapper.log
-("This is a log message!
-"
-);
+AppLoggerWrapper.log("This is a log message!");
 ```
 
 Example with dynamic values and URLs:
@@ -78,11 +75,7 @@ Example with dynamic values and URLs:
 ```dart
 
 int counter = 3;
-AppLoggerWrapper.log
-("Button pressed 
-$counter times — visit google.com
-"
-);
+AppLoggerWrapper.log("Button pressed $counter times — visit google.com");
 ```
 
 This will automatically appear in the in-app log viewer.
@@ -111,17 +104,9 @@ You can view, scroll, and interact with your logs live.
 Example of forcing logs to show in release mode:
 
 ```dart
-AppLoggerWrapper
-(
-isEnabled
-:
-true
-, // Force enable in release
-child
-:
-child
-!
-,
+AppLoggerWrapper(
+  isEnabled: true, // Force enable in release
+  child: child!,
 )
 ```
 
@@ -140,10 +125,7 @@ child
 When pressing a button and logging:
 
 ```dart
-AppLoggerWrapper.log
-("Hi 1 google.com
-"
-);
+AppLoggerWrapper.log("Hi 1 google.com");
 ```
 
 You’ll see in the overlay:
